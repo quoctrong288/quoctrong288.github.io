@@ -47,9 +47,31 @@
 // Import partials from `sass_dir` (defaults to `_sass`)
 
 @import "reset", "header", "post", "page", "syntax-highlighting", "index", "demo", "footer", "scrollbar", "backToTop";
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 
-/*
-//@import url("https://fonts.googleapis.com/css?family=Inconsolata");
-//* {
-//  font-family: 'Inconsolata', monospace !important; }
-*/
+* {
+  font-family: 'Inconsolata', monospace !important;
+}
+
+i.fa {
+  font-family: 'FontAwesome' !important;
+}
+
+a.brand {
+  font-size: 2em !important;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.2em;
+}
+
+#top {
+  small {
+    font-size: 1.2em !important;
+    font-weight: 700;
+  }
+}
+
+pre > code {
+  font-size: 1em;
+  font-weight: 600;
+}
