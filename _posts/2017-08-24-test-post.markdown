@@ -5,6 +5,7 @@ date:   2017-08-24 15:00:00
 categories: Guide
 tags: guide
 excerpt: Một số hướng dẫn cơ bản để sử dụng markdown!
+author: Quoc Trong Pham
 mathjax: true
 ---
 

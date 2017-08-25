@@ -5,6 +5,7 @@ date:   2017-08-25 00:15:00
 categories: String
 tags: algorithms
 excerpt: Thuật toán hash xử lý chuỗi
+author: Quoc Trong Pham
 mathjax: true
 ---
 
