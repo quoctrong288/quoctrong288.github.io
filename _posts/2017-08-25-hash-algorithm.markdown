@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hash algorithm"
-date:   2017-08-26 00:15:00
+date:   2017-08-25 00:15:00
 categories: string
 tags: algorithms
 excerpt: Thuật toán hash xử lý chuỗi
