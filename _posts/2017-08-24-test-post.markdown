@@ -2,8 +2,8 @@
 layout: post
 title:  "Test mark down"
 date:   2017-08-24 15:00:00
-categories: test
-tags: test
+categories: Guide
+tags: guide
 excerpt: Một số hướng dẫn cơ bản để sử dụng markdown!
 mathjax: true
 ---
