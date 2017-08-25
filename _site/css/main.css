@@ -1,6 +1,7 @@
 /*
  * variables
  */
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 body,
 html,
 div,
@@ -951,8 +952,22 @@ pre {
       line-height: 33px;
       text-align: center;
       font-size: 18px; } }
-/*
-//@import url("https://fonts.googleapis.com/css?family=Inconsolata");
-//* {
-//  font-family: 'Inconsolata', monospace !important; }
-*/
+* {
+  font-family: 'Inconsolata', monospace !important; }
+
+i.fa {
+  font-family: 'FontAwesome' !important; }
+
+a.brand {
+  font-size: 2em !important;
+  font-weight: bold;
+  cursor: pointer;
+  letter-spacing: 0.2em; }
+
+#top small {
+  font-size: 1.2em !important;
+  font-weight: 700; }
+
+pre > code {
+  font-size: 1em;
+  font-weight: 600; }
