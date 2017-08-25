@@ -30,35 +30,35 @@ mathjax: true
 ## Tags
 
 * Sẽ sử dụng các tags của Codeforces đối với mục thuật toán, loại bỏ bớt một số tag mạnh quá sức, thêm tag algorithm vào các bài thuật toán
-	* implementation
-	* dp
-	* math
-	* greedy
-	* brute force
-	* data structures
-	* constructive algorithms
-	* dfs and similar
-	* sortings
-	* binary search
-	* graphs
-	* trees
-	* strings
-	* number theory
-	* geometry
-	* combinatorics
-	* two pointers
-	* dsu
-	* bitmasks
-	* shortest paths
-	* hashing
-	* divide and conquer
-	* games
-	* flows
-	* graph matchings
+	* **implementation**
+	* **dp**
+	* **math**
+	* **greedy**
+	* **brute force**
+	* **data structures**
+	* **constructive algorithms**
+	* **dfs and similar**
+	* **sortings**
+	* **binary search**
+	* **graphs**
+	* **trees**
+	* **strings**
+	* **number theory**
+	* **geometry**
+	* **combinatorics**
+	* **two pointers**
+	* **dsu**
+	* **bitmasks**
+	* **shortest paths**
+	* **hashing**
+	* **divide and conquer**
+	* **games**
+	* **flows**
+	* **graph matchings**
 
 * Các tag liên quan đến kiến thức môn học sẽ tùy theo công nghệ. Ngoài ra còn có các tag khác:
-	* english (học tiếng anh)
-	* other (các mục khác)
-	* guide (các hướng dẫn website)
+	* **english** (học tiếng anh)
+	* **other** (các mục khác)
+	* **guide** (các hướng dẫn website)
 
 ## 
