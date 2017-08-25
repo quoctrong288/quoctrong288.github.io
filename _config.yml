@@ -9,7 +9,7 @@
 title: QT
 brief-intro: Dev Engineer
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "127.0.0.1:4000" # the base hostname & protocol for your site
+url: "quoctrong288.github.io" # the base hostname & protocol for your site
 
 permalink: /:year/:month/:day/:title/
 
