@@ -1,6 +1,7 @@
 /*
  * variables
  */
+@import url("https://fonts.googleapis.com/css?family=Inconsolata");
 body,
 html,
 div,
@@ -951,3 +952,5 @@ pre {
       line-height: 33px;
       text-align: center;
       font-size: 18px; } }
+* {
+  font-family: 'Inconsolata', monospace !important; }
