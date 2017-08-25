@@ -5,6 +5,7 @@ date:   2017-08-25 00:00:00
 categories: Guide
 tags: guide
 excerpt: Một số quy ước khi post bài!
+author: Quoc Trong Pham
 mathjax: true
 ---
 
