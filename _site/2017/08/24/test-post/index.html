@@ -6,16 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>hello jekyll!</title>
-    <meta name="description" content="First post!">
+    <title>Test mark down</title>
+    <meta name="description" content="second post!">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="quoctrong288.github.io/2015/02/10/welcome-to-jekyll/">
-    <link rel="alternate" type="application/rss+xml" title="QT" href="quoctrong288.github.io/feed.xml ">
+    <link rel="canonical" href="http://localhost:4000/2017/08/24/test-post/">
+    <link rel="alternate" type="application/rss+xml" title="QT" href="http://localhost:4000/feed.xml ">
 
 
     <script>
@@ -151,11 +151,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>hello jekyll!</h1>
+        <h1>Test mark down</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2015-02-10
+                <i class="fa fa-calendar"></i>2017-08-24
             </div>
 
             <div class="label-card">
@@ -175,7 +175,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#jekyll" title="Category: jekyll" rel="category">jekyll</a>
+        <a href="/category/#test" title="Category: test" rel="category">test</a>
     
   
 
@@ -192,8 +192,8 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#jekyll" title="Tag: jekyll" rel="tag">jekyll</a-->
-        <a href="/tag/#jekyll" title="Tag: jekyll" rel="tag">jekyll</a>
+        <!--a href="/tag/#test" title="Tag: test" rel="tag">test</a-->
+        <a href="/tag/#test" title="Tag: test" rel="tag">test</a>
     
   
 
@@ -204,28 +204,152 @@
         </div>
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
-        <p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+        <ul id="markdown-toc">
+  <li><a href="#phần-header" id="markdown-toc-phần-header">Phần header</a></li>
+  <li><a href="#danh-sách" id="markdown-toc-danh-sách">Danh sách</a></li>
+  <li><a href="#hình-ảnh-link" id="markdown-toc-hình-ảnh-link">Hình ảnh, link</a></li>
+  <li><a href="#nhúng-code" id="markdown-toc-nhúng-code">Nhúng code</a>    <ul>
+      <li><a href="#tạo-trích-dẫn" id="markdown-toc-tạo-trích-dẫn">Tạo trích dẫn</a></li>
+    </ul>
+  </li>
+  <li><a href="#tạo-bảng" id="markdown-toc-tạo-bảng">Tạo bảng</a></li>
+  <li><a href="#tạo-chú-thích" id="markdown-toc-tạo-chú-thích">Tạo chú thích</a></li>
+  <li><a href="#tạo-biểu-thức-toán-học" id="markdown-toc-tạo-biểu-thức-toán-học">Tạo biểu thức toán học</a></li>
+</ul>
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>Thêm 
+<code class="highlighter-rouge">* content \n {:toc}</code> vào đầu bài viết để chia mục nội dung bên phải (\n là xuống dòng), phần này sẽ chia theo các header dưới đây:</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<h2 id="phần-header">Phần header</h2>
 
-<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span>
+<ul>
+  <li>”# Header 1”</li>
+  <li>”## Header 2”</li>
+  <li>”### Header 3”</li>
+  <li>”#### Header 4”</li>
+  <li>”##### Header 5”</li>
+  <li>
+    <p>”###### Header 6”</p>
+  </li>
+  <li><em>in nghiêng</em></li>
+  <li><strong>in đậm</strong></li>
+  <li><code class="highlighter-rouge">đóng khung</code></li>
+</ul>
+
+<h2 id="danh-sách">Danh sách</h2>
+<ul>
+  <li>List 1
+    <ul>
+      <li>Sublist 1</li>
+      <li>Sublist 2</li>
+    </ul>
+  </li>
+  <li>List 2</li>
+</ul>
+
+<p>Number list:</p>
+<ol>
+  <li>apples</li>
+  <li>oranges</li>
+  <li>somethings</li>
+</ol>
+
+<h2 id="hình-ảnh-link">Hình ảnh, link</h2>
+
+<ul>
+  <li>Sử dụng thẻ img trong html để resize</li>
+</ul>
+
+<p><img src="https://i.pinimg.com/736x/bc/f0/4e/bcf04eafebdf707b8d900f02e6d8bd70--photo-tag-touch-me.jpg" width="200" /></p>
+<ul>
+  <li>
+    <p>Không thể chỉnh kích thước ảnh trên internet -_-
+<img src="https://i.pinimg.com/736x/bc/f0/4e/bcf04eafebdf707b8d900f02e6d8bd70--photo-tag-touch-me.jpg" alt="demo_image" /></p>
+  </li>
+  <li>
+    <p><a href="https://facebook.com/quoctrong.qb">demo_link_1</a></p>
+  </li>
+  <li>
+    <p><a href="https://facebook.com/quoctrong.qb">demo_link_nay</a></p>
+  </li>
+</ul>
+
+<h2 id="nhúng-code">Nhúng code</h2>
+
+<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"HELLO WORLD!"</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre>
 </div>
 
-<p>Check out the <a href="http://jekyllrb.com">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://github.com/jekyll/jekyll-help">Jekyll’s dedicated Help repository</a>.</p>
+<h3 id="tạo-trích-dẫn">Tạo trích dẫn</h3>
+<ul>
+  <li>Một developer nổi tiếng ở Trung Quốc đã từng nói:
+    <blockquote>
+      <p>前端发展很快，现代浏览器原生已经足够好用。我们并不需要为了操作</p>
+    </blockquote>
+  </li>
+  <li>Một cách khác để tạo danh sách: 
+<code class="highlighter-rouge">[+]</code></li>
+</ul>
 
-<p>Block Mathjax</p>
+<h2 id="tạo-bảng">Tạo bảng</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Cột 1</th>
+      <th>Cột 2</th>
+      <th>Cột 3</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Hàng 1</td>
+      <td>1x2</td>
+      <td>1x3</td>
+    </tr>
+    <tr>
+      <td>Hàng 2</td>
+      <td>2x2</td>
+      <td>2x3</td>
+    </tr>
+    <tr>
+      <td>Hàng 3</td>
+      <td>3x2</td>
+      <td>3x3</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="tạo-chú-thích">Tạo chú thích</h2>
+
+<ul>
+  <li>Chú thích<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></li>
+</ul>
+
+<p>Chi tiết hơn ở link sau: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">LINK</a></p>
+
+<h2 id="tạo-biểu-thức-toán-học">Tạo biểu thức toán học</h2>
+<ul>
+  <li>Sử dụng Mathjax</li>
+</ul>
 
 <script type="math/tex; mode=display">f(x) = ax + b</script>
 
-<p>Inline Mathjax $a \neq b$</p>
-
+<ul>
+  <li>Inline Mathjax $a \neq b$</li>
+</ul>
+<div class="footnotes">
+  <ol>
+    <li id="fn:1">
+      <p>Là cái gì đó, nó luôn luôn nằm ở dưới cùng.&nbsp;<a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    </li>
+  </ol>
+</div>
 
         </article>
         <hr>
@@ -257,8 +381,8 @@
      */
 
     var disqus_config = function() {
-        this.page.url = 'quoctrong288.github.io/2015/02/10/welcome-to-jekyll/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'quoctrong288.github.io/2015/02/10/welcome-to-jekyll/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'http://localhost:4000/2017/08/24/test-post/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://localhost:4000/2017/08/24/test-post/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE

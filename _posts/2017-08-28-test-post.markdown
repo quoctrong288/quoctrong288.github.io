@@ -1,11 +1,98 @@
 ---
 layout: post
-title:  "test post"
-date:   2017-08-28 15:14:54
+title:  "Test mark down"
+date:   2017-08-24 15:00:00
 categories: test
 tags: test
 excerpt: second post!
 mathjax: true
 ---
 
-test post
+* content 
+{:toc}
+
+Thêm 
+`* content \n {:toc}` vào đầu bài viết để chia mục nội dung bên phải (\n là xuống dòng), phần này sẽ chia theo các header dưới đây:
+
+## Phần header
+
+* "# Header 1"
+* "## Header 2"
+* "### Header 3"
+* "#### Header 4"
+* "##### Header 5"
+* "###### Header 6"
+
+* *in nghiêng*
+* **in đậm**
+* `đóng khung`
+
+
+## Danh sách
+* List 1
+	* Sublist 1
+	* Sublist 2
+* List 2
+
+Number list:
+1. apples
+2. oranges
+3. somethings
+
+## Hình ảnh, link
+
+* Sử dụng thẻ img trong html để resize
+
+<p><img src="https://i.pinimg.com/736x/bc/f0/4e/bcf04eafebdf707b8d900f02e6d8bd70--photo-tag-touch-me.jpg" width="200"></p>
+* Không thể chỉnh kích thước ảnh trên internet -_-
+![demo_image](https://i.pinimg.com/736x/bc/f0/4e/bcf04eafebdf707b8d900f02e6d8bd70--photo-tag-touch-me.jpg)
+
+* [demo_link_1](https://facebook.com/quoctrong.qb)
+
+* [demo_link_nay][demo_link]
+
+[demo_link]: https://facebook.com/quoctrong.qb
+
+
+
+## Nhúng code
+
+``` c++
+#include <iostream>
+
+int main() {
+	std::cout << "HELLO WORLD!";
+	return 0;
+}
+```
+
+### Tạo trích dẫn
+* Một developer nổi tiếng ở Trung Quốc đã từng nói:
+> 前端发展很快，现代浏览器原生已经足够好用。我们并不需要为了操作
+* Một cách khác để tạo danh sách: 
+`[+]`
+
+## Tạo bảng
+
+|Cột 1|Cột 2|Cột 3|
+|------|-------|-------|
+|Hàng 1|1x2|1x3|
+|Hàng 2|2x2|2x3|
+|Hàng 3|3x2|3x3|
+
+## Tạo chú thích
+
+* Chú thích[^1]
+
+[^1]: Là cái gì đó, nó luôn luôn nằm ở dưới cùng.
+
+Chi tiết hơn ở link sau: [LINK](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+## Tạo biểu thức toán học
+* Sử dụng Mathjax
+
+$$
+f(x) = ax + b
+$$
+
+* Inline Mathjax $a \neq b$
