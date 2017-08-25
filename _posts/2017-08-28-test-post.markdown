@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "test post"
-date:   2017-28-08 15:14:54
+date:   2017-08-28 15:14:54
 categories: test
 tags: test
 excerpt: second post!
