@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Matrix multiply"
-date:   2017-08-26 20:00:00
+date:   2017-08-26 10:00:00
 categories: Math
 tags: math dp
 excerpt: Phép nhân ma trận và ứng dụng
@@ -15,89 +15,99 @@ mathjax: true
 ## Giới thiệu
 
 Nhân ma trận là một phép tính toán nhân hai ma trận lại với nhau và tạo ra một ma trận mới là tích hai ma trận. Nó được định nghĩa tóm tắt như sau:
-* Cho 2 ma trận: $A kích thước $M * $N và $B kích thước $N * $P (số cột của ma trận thứ nhất phải bằng số hàng của ma trận thứ hai mới thực hiện được phép nhân trên hai ma trận)
-* Tích hai ma trận là ma trận C kích thước $M * $P được tính theo công thức: 
-$$
-$C(*i*, *j*) = Sum($A(*i*, *k*) * $B(*k*, *j*)))
-$$ 
+* Cho 2 ma trận: **$A$** kích thước **$M$** * **$N$** và **$B$** kích thước **$N$** * **$P$** (số cột của ma trận thứ nhất phải bằng số hàng của ma trận thứ hai mới thực hiện được phép nhân trên hai ma trận)
+* Tích hai ma trận là ma trận **$C$** kích thước **$M$** * **$P$** được tính theo công thức: 
+<br>
+$$C(i, j) = \sum \mathrm A(i, k) * \mathrm B(k, j)$$
+* Công thức trên được phát biểu lại như sau: Lấy các phần tử trên hàng i của matrix **$A$** nhân với các phần tử tương ứng trên cột j của matrix **$B$**, cộng tất cả lại vào phần tử hàng i cột j của matrix **$C$**.
 
-* "# Header 1"
-* "## Header 2"
-* "### Header 3"
-* "#### Header 4"
-* "##### Header 5"
-* "###### Header 6"
-
-* *in nghiêng*
-* **in đậm**
-* `đóng khung`
-
-
-## Danh sách
-* List 1
-	* Sublist 1
-	* Sublist 2
-* List 2
-
-Number list:
-1. apples
-2. oranges
-3. somethings
-
-## Hình ảnh, link
-
-* Sử dụng thẻ img trong html để resize
-
-<p><img src="https://i.pinimg.com/736x/bc/f0/4e/bcf04eafebdf707b8d900f02e6d8bd70--photo-tag-touch-me.jpg" width="200"></p>
-* Không thể chỉnh kích thước ảnh trên internet -_-
-![demo_image](https://i.pinimg.com/736x/bc/f0/4e/bcf04eafebdf707b8d900f02e6d8bd70--photo-tag-touch-me.jpg)
-
-* [demo_link_1](https://facebook.com/quoctrong.qb)
-
-* [demo_link_nay][demo_link]
-
-[demo_link]: https://facebook.com/quoctrong.qb
-
-
-
-## Nhúng code
-
-``` c++
-#include <iostream>
-
-int main() {
-	std::cout << "HELLO WORLD!";
-	return 0;
-}
+* Để thực hiện công thức này trên máy tính, ta có thể viết thuật toán với độ phức tạp **$M$** * **$N$** * **$P$** như sau:
+```c++
+for (int i = 1; i <= M; i++)
+	for (int j = 1; j <= P; j++) {
+		C[i][j] = 0;
+		for (int k = 1; k <= N; k++)
+			C[i][j] += A[i][k] * B[k][j];
+	}
 ```
 
-### Tạo trích dẫn
-* Một developer nổi tiếng ở Trung Quốc đã từng nói:
-> 前端发展很快，现代浏览器原生已经足够好用。我们并不需要为了操作
-* Một cách khác để tạo danh sách: 
-`[+]`
+## Ưng dụng
 
-## Tạo bảng
+* Tùy theo từng bài toán mà phép nhân ma trận được ứng dụng khác nhau.
+* Phép nhân ma trận thường được sử dụng để xử lý các bài toán yêu cầu số vòng lặp lớn, không thể duyệt được hết. Thường là $10^9$ hoặc $10^{18}$. Khi này chúng ta sẽ sử dụng phép nhân ma trận cùng với mũ nhị phân để giải quyết.
 
-|Cột 1|Cột 2|Cột 3|
-|------|-------|-------|
-|Hàng 1|1x2|1x3|
-|Hàng 2|2x2|2x3|
-|Hàng 3|3x2|3x3|
+## Bài tập ví dụ
 
-## Tạo chú thích
+**Bài toán**
 
-* Chú thích[^1]
 
-[^1]: Là cái gì đó, nó luôn luôn nằm ở dưới cùng.
+[LATGACH4](http://vn.spoj.com/problems/LATGACH4/)
+<br>
+Đây là một bài tập kinh điển sử dụng nhân ma trận.
 
-Chi tiết hơn ở link sau: [LINK](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+**Phân tích**
+<br>
+Bài toán này ta có thể phân tích theo hướng quy hoạch động một cách dễ dàng như sau:
+* Gọi **$F$**(N) là số cách lát 2 * N viên gạch. Khi đó, có 2 trường hợp có thể dẫn đến được **$F$**(N) đó là từ **$F$**(N-1) lát thêm 1 viên nằm đứng, hoặc từ **$F$**(N--2) lát thêm 2 viên nằm ngang.
+* Như vậy công thức để tính là: `F(N) = F(N-1) + F(N-2)`
+* Với **$F$**(1) = 1 và **$F$**(2) = 2 (chúng ta có thể tự tính ra điều này).
 
-## Tạo biểu thức toán học
-* Sử dụng Mathjax
+Như vậy chúng ta có thể nghĩ ngay đến việc chạy từ 1 đến N để tính. Nhưng như thế là vẫn chưa đủ, với việc chạy như vậy cùng với giới hạn N của đề cho là $10^9$ thì sẽ bị Time Limit Exceed (TLE) ngay.
+<br>
+Ta sẽ sử dụng cách khác. Ta xét các lớp số sau:
+* **$F$**(1), **$F$**(2)
+* **$F$**(2), **$F$**(3)
+* ...
+* **$F$**(i), **$F$**(i+1)
+
+Từ các lớp số trước, ta có thể tính toán được các lớp số sau:
+<br>
+Ta có:
+* $ F(i) = 0 * F(i-1) + 1 * F(i) $
+* $ F(i+1) = 1 * F(i-1) + 1 * F(i) $
+
+Từ đây ta có thể nhận thấy với mỗi lớp số ta có thể viết lại thành một ma trận 1x2, nhân với một ma trận trung gian 2x2 để tạo ra một ma trận 1x2 chính là lớp tiếp theo:
 
 $$
-f(x) = ax + b
+        \begin{pmatrix}
+        0 & 1 \\
+        1 & 1 \\
+        \end{pmatrix}
+        x 
+        \begin{pmatrix}
+        F_{i-1} \\
+        F_i \\
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+        F_i \\
+        F_{i+1} \\
+        \end{pmatrix}
+$$
+<br>
+Từ đây ta có được công thức tính $F_N$:
+<br>
+$$
+		\begin{pmatrix}
+        0 & 1 \\
+        1 & 1 \\
+        \end{pmatrix}^N
+        x 
+        \begin{pmatrix}
+        F_0 \\
+        F_1 \\
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+        F_N \\
+        F_{N+1} \\
+        \end{pmatrix}
 $$
 
-* Inline Mathjax $a \neq b$
+Vậy là ta đã tìm được công thức, công việc còn lại là áp dụng lũy thừa nhị phân cộng với việc xử lý số lớn (giới hạn số trong máy tính là số nguyên 64 bit, sẽ có bài viết sau)
+
+## Code
+
+```c++
+Your code goes here!
+```

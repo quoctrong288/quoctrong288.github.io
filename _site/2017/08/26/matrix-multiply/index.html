@@ -6,15 +6,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Một số quy ước trong blog</title>
-    <meta name="description" content="Một số quy ước khi post bài!">
+    <title>Matrix multiply</title>
+    <meta name="description" content="Phép nhân ma trận và ứng dụng">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="https://quoctrong288.github.io/2017/08/25/quy-tac-blog/">
+    <link rel="canonical" href="https://quoctrong288.github.io/2017/08/26/matrix-multiply/">
     <link rel="alternate" type="application/rss+xml" title="QT" href="https://quoctrong288.github.io/feed.xml ">
 
 
@@ -151,11 +151,11 @@
 
         <div class="page clearfix" post>
     <div class="left">
-        <h1>Một số quy ước trong blog</h1>
+        <h1>Matrix multiply</h1>
         <div class="label">
 
             <div class="label-card">
-                <i class="fa fa-calendar"></i>2017-08-25
+                <i class="fa fa-calendar"></i>2017-08-26
             </div>
 
             <div class="label-card">
@@ -176,7 +176,7 @@
   <i class="fa fa-th-list"></i>
   
     
-        <a href="/category/#Guide" title="Category: Guide" rel="category">Guide</a>
+        <a href="/category/#Math" title="Category: Math" rel="category">Math</a>
     
   
 
@@ -193,8 +193,11 @@
   <i class="fa fa-tags"></i>
   
     
-        <!--a href="/tag/#guide" title="Tag: guide" rel="tag">guide</a-->
-        <a href="/tag/#guide" title="Tag: guide" rel="tag">guide</a>
+        <!--a href="/tag/#math" title="Tag: math" rel="tag">math</a-->
+        <a href="/tag/#math" title="Tag: math" rel="tag">math</a>&nbsp;
+    
+        <!--a href="/tag/#dp" title="Tag: dp" rel="tag">dp</a-->
+        <a href="/tag/#dp" title="Tag: dp" rel="tag">dp</a>
     
   
 
@@ -206,73 +209,120 @@
         <hr>
         <article itemscope itemtype="http://schema.org/BlogPosting">
         <ul id="markdown-toc">
-  <li><a href="#categories" id="markdown-toc-categories">Categories</a></li>
-  <li><a href="#tags" id="markdown-toc-tags">Tags</a></li>
+  <li><a href="#giới-thiệu" id="markdown-toc-giới-thiệu">Giới thiệu</a></li>
+  <li><a href="#ưng-dụng" id="markdown-toc-ưng-dụng">Ưng dụng</a></li>
+  <li><a href="#bài-tập-ví-dụ" id="markdown-toc-bài-tập-ví-dụ">Bài tập ví dụ</a></li>
+  <li><a href="#code" id="markdown-toc-code">Code</a></li>
 </ul>
 
-<h2 id="categories">Categories</h2>
+<h2 id="giới-thiệu">Giới thiệu</h2>
+
+<p>Nhân ma trận là một phép tính toán nhân hai ma trận lại với nhau và tạo ra một ma trận mới là tích hai ma trận. Nó được định nghĩa tóm tắt như sau:</p>
+<ul>
+  <li>Cho 2 ma trận: <strong>$A$</strong> kích thước <strong>$M$</strong> * <strong>$N$</strong> và <strong>$B$</strong> kích thước <strong>$N$</strong> * <strong>$P$</strong> (số cột của ma trận thứ nhất phải bằng số hàng của ma trận thứ hai mới thực hiện được phép nhân trên hai ma trận)</li>
+  <li>Tích hai ma trận là ma trận <strong>$C$</strong> kích thước <strong>$M$</strong> * <strong>$P$</strong> được tính theo công thức: 
+<br />
+<script type="math/tex">C(i, j) = \sum \mathrm A(i, k) * \mathrm B(k, j)</script></li>
+  <li>
+    <p>Công thức trên được phát biểu lại như sau: Lấy các phần tử trên hàng i của matrix <strong>$A$</strong> nhân với các phần tử tương ứng trên cột j của matrix <strong>$B$</strong>, cộng tất cả lại vào phần tử hàng i cột j của matrix <strong>$C$</strong>.</p>
+  </li>
+  <li>Để thực hiện công thức này trên máy tính, ta có thể viết thuật toán với độ phức tạp <strong>$M$</strong> * <strong>$N$</strong> * <strong>$P$</strong> như sau:
+    <div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">M</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+  <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">P</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+      <span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+      <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">k</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">k</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">k</span><span class="o">++</span><span class="p">)</span>
+          <span class="n">C</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">j</span><span class="p">]</span> <span class="o">+=</span> <span class="n">A</span><span class="p">[</span><span class="n">i</span><span class="p">][</span><span class="n">k</span><span class="p">]</span> <span class="o">*</span> <span class="n">B</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="n">j</span><span class="p">];</span>
+  <span class="p">}</span>
+</code></pre>
+    </div>
+  </li>
+</ul>
+
+<h2 id="ưng-dụng">Ưng dụng</h2>
 
 <ul>
-  <li>Danh sách các category (sẽ có update thêm):
-    <ul>
-      <li><strong>Implementation</strong> (Các bài tập căn bản)</li>
-      <li><strong>Dynamic Programming</strong> (Quy hoạch động)</li>
-      <li><strong>Math</strong> (Toán, lý thuyết số/game, số nguyên tố…)</li>
-      <li><strong>Graph</strong> (Đồ thị, cây, đường đi ngắn nhất…)</li>
-      <li><strong>String</strong> (Xử lý chuỗi, xâu)</li>
-      <li><strong>Data Structures</strong> (Các cấu trúc dữ liệu)</li>
-      <li><strong>Greedy</strong> (Thuật toán tham lam)</li>
-      <li><strong>Algorithmic Skills</strong> (Các kỹ năng lập trình, cài đặt thuật toán…)</li>
-      <li><strong>Software Engineering</strong> (Các kiến thức liên quan đến bộ môn Công Nghệ Phần Mềm)</li>
-      <li><strong>Computer Network</strong> (Các kiến thức liên quan đến bộ môn Mạng Máy Tính)</li>
-      <li><strong>Guide</strong> (Hướng dẫn web)</li>
-    </ul>
-  </li>
-  <li>Sub-categories đang thử tìm hiểu, nếu được thì sẽ thêm vào sau.</li>
+  <li>Tùy theo từng bài toán mà phép nhân ma trận được ứng dụng khác nhau.</li>
+  <li>Phép nhân ma trận thường được sử dụng để xử lý các bài toán yêu cầu số vòng lặp lớn, không thể duyệt được hết. Thường là $10^9$ hoặc $10^{18}$. Khi này chúng ta sẽ sử dụng phép nhân ma trận cùng với mũ nhị phân để giải quyết.</li>
 </ul>
 
-<h2 id="tags">Tags</h2>
+<h2 id="bài-tập-ví-dụ">Bài tập ví dụ</h2>
 
+<p><strong>Bài toán</strong></p>
+
+<p><a href="http://vn.spoj.com/problems/LATGACH4/">LATGACH4</a>
+<br />
+Đây là một bài tập kinh điển sử dụng nhân ma trận.</p>
+
+<p><strong>Phân tích</strong>
+<br />
+Bài toán này ta có thể phân tích theo hướng quy hoạch động một cách dễ dàng như sau:</p>
 <ul>
-  <li>Sẽ sử dụng các tags của Codeforces đối với mục thuật toán, loại bỏ bớt một số tag mạnh quá sức, thêm tag algorithm vào các bài thuật toán
-    <ul>
-      <li><strong>implementation</strong></li>
-      <li><strong>dp</strong></li>
-      <li><strong>math</strong></li>
-      <li><strong>greedy</strong></li>
-      <li><strong>brute force</strong></li>
-      <li><strong>data structures</strong></li>
-      <li><strong>constructive algorithms</strong></li>
-      <li><strong>dfs and similar</strong></li>
-      <li><strong>sortings</strong></li>
-      <li><strong>binary search</strong></li>
-      <li><strong>graphs</strong></li>
-      <li><strong>trees</strong></li>
-      <li><strong>strings</strong></li>
-      <li><strong>number theory</strong></li>
-      <li><strong>geometry</strong></li>
-      <li><strong>combinatorics</strong></li>
-      <li><strong>two pointers</strong></li>
-      <li><strong>dsu</strong></li>
-      <li><strong>bitmasks</strong></li>
-      <li><strong>shortest paths</strong></li>
-      <li><strong>hashing</strong></li>
-      <li><strong>divide and conquer</strong></li>
-      <li><strong>games</strong></li>
-      <li><strong>flows</strong></li>
-      <li><strong>graph matchings</strong></li>
-    </ul>
-  </li>
-  <li>Các tag liên quan đến kiến thức môn học sẽ tùy theo công nghệ. Ngoài ra còn có các tag khác:
-    <ul>
-      <li><strong>english</strong> (học tiếng anh)</li>
-      <li><strong>other</strong> (các mục khác)</li>
-      <li><strong>guide</strong> (các hướng dẫn website)</li>
-    </ul>
-  </li>
+  <li>Gọi <strong>$F$</strong>(N) là số cách lát 2 * N viên gạch. Khi đó, có 2 trường hợp có thể dẫn đến được <strong>$F$</strong>(N) đó là từ <strong>$F$</strong>(N-1) lát thêm 1 viên nằm đứng, hoặc từ <strong>$F$</strong>(N–2) lát thêm 2 viên nằm ngang.</li>
+  <li>Như vậy công thức để tính là: <code class="highlighter-rouge">F(N) = F(N-1) + F(N-2)</code></li>
+  <li>Với <strong>$F$</strong>(1) = 1 và <strong>$F$</strong>(2) = 2 (chúng ta có thể tự tính ra điều này).</li>
 </ul>
 
-<p>##</p>
+<p>Như vậy chúng ta có thể nghĩ ngay đến việc chạy từ 1 đến N để tính. Nhưng như thế là vẫn chưa đủ, với việc chạy như vậy cùng với giới hạn N của đề cho là $10^9$ thì sẽ bị Time Limit Exceed (TLE) ngay.
+<br />
+Ta sẽ sử dụng cách khác. Ta xét các lớp số sau:</p>
+<ul>
+  <li><strong>$F$</strong>(1), <strong>$F$</strong>(2)</li>
+  <li><strong>$F$</strong>(2), <strong>$F$</strong>(3)</li>
+  <li>…</li>
+  <li><strong>$F$</strong>(i), <strong>$F$</strong>(i+1)</li>
+</ul>
+
+<p>Từ các lớp số trước, ta có thể tính toán được các lớp số sau:
+<br />
+Ta có:</p>
+<ul>
+  <li>$ F(i) = 0 * F(i-1) + 1 * F(i) $</li>
+  <li>$ F(i+1) = 1 * F(i-1) + 1 * F(i) $</li>
+</ul>
+
+<p>Từ đây ta có thể nhận thấy với mỗi lớp số ta có thể viết lại thành một ma trận 1x2, nhân với một ma trận trung gian 2x2 để tạo ra một ma trận 1x2 chính là lớp tiếp theo:</p>
+
+<p><script type="math/tex">% <![CDATA[
+\begin{pmatrix}
+        0 & 1 \\
+        1 & 1 \\
+        \end{pmatrix}
+        x 
+        \begin{pmatrix}
+        F_{i-1} \\
+        F_i \\
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+        F_i \\
+        F_{i+1} \\
+        \end{pmatrix} %]]></script>
+<br />
+Từ đây ta có được công thức tính $F_N$:
+<br />
+<script type="math/tex">% <![CDATA[
+\begin{pmatrix}
+        0 & 1 \\
+        1 & 1 \\
+        \end{pmatrix}^N
+        x 
+        \begin{pmatrix}
+        F_0 \\
+        F_1 \\
+        \end{pmatrix}
+        = 
+        \begin{pmatrix}
+        F_N \\
+        F_{N+1} \\
+        \end{pmatrix} %]]></script></p>
+
+<p>Vậy là ta đã tìm được công thức, công việc còn lại là áp dụng lũy thừa nhị phân cộng với việc xử lý số lớn (giới hạn số trong máy tính là số nguyên 64 bit, sẽ có bài viết sau)</p>
+
+<h2 id="code">Code</h2>
+
+<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="n">Your</span> <span class="n">code</span> <span class="n">goes</span> <span class="n">here</span><span class="o">!</span>
+</code></pre>
+</div>
 
         </article>
         <hr>
@@ -284,7 +334,14 @@
                 
                     
                 
+                    
+                
             
+        
+            
+            
+                
+                    
                 
                     
                 
@@ -295,41 +352,20 @@
                 
                     
                 
-            
-        
-            
-            
-                
-                    
-                        
-                        <h2 id="similar_posts">Similar Posts</h2>
-                        <ul>
-                        
-                        <li class="relatedPost">
-                            <a href="/2017/08/24/test-post/">Test mark down
-                            
-                            </a>
-                        </li>
-                        
-                        
                     
                 
             
         
-        
-            </ul>
         
 
         <div class="post-recent">
     <div class="pre">
         
-        <p><strong>Previous post: </strong> <a href="/2017/08/24/test-post/">Test mark down</a></p>
+        <p><strong>Previous post: </strong> <a href="/2017/08/25/hash-algorithm/">Hash algorithm</a></p>
         
     </div>
     <div class="nex">
 
-        
-        <p><strong>Next post: </strong> <a href="/2017/08/25/hash-algorithm/">Hash algorithm</a></p>
         
     </div>
 </div>
@@ -345,8 +381,8 @@
      */
 
     var disqus_config = function() {
-        this.page.url = 'https://quoctrong288.github.io/2017/08/25/quy-tac-blog/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://quoctrong288.github.io/2017/08/25/quy-tac-blog/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        this.page.url = 'https://quoctrong288.github.io/2017/08/26/matrix-multiply/'; // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'https://quoctrong288.github.io/2017/08/26/matrix-multiply/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
 
     (function() { // DON'T EDIT BELOW THIS LINE
@@ -375,8 +411,6 @@
                     Content
                 </div>
                 <ul id="content-side" class="content-ul">
-                    
-                    <li><a href="#similar_posts">Similar Posts</a></li>
                     
                     <li><a href="#comments">Comments</a></li>
                 </ul>
