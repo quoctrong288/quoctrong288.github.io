@@ -3,23 +3,51 @@
   <channel>
     <title>QT</title>
     <description></description>
-    <link>quoctrong288.github.io/</link>
-    <atom:link href="quoctrong288.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 25 Aug 2017 23:38:41 +0700</pubDate>
-    <lastBuildDate>Fri, 25 Aug 2017 23:38:41 +0700</lastBuildDate>
+    <link>https://quoctrong288.github.io/</link>
+    <atom:link href="https://quoctrong288.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 26 Aug 2017 20:33:21 +0700</pubDate>
+    <lastBuildDate>Sat, 26 Aug 2017 20:33:21 +0700</lastBuildDate>
     <generator>Jekyll v3.5.2</generator>
+    
+      <item>
+        <title>Hash algorithm</title>
+        <description>Thuật toán hash xử lý chuỗi</description>
+        <pubDate>Fri, 25 Aug 2017 07:15:00 +0700</pubDate>
+        <link>https://quoctrong288.github.io/2017/08/25/hash-algorithm/</link>
+        <guid isPermaLink="true">https://quoctrong288.github.io/2017/08/25/hash-algorithm/</guid>
+        
+        <category>algorithms</category>
+        
+        
+        <category>String</category>
+        
+      </item>
+    
+      <item>
+        <title>Một số quy ước trong blog</title>
+        <description>Một số quy ước khi post bài!</description>
+        <pubDate>Fri, 25 Aug 2017 07:00:00 +0700</pubDate>
+        <link>https://quoctrong288.github.io/2017/08/25/quy-tac-blog/</link>
+        <guid isPermaLink="true">https://quoctrong288.github.io/2017/08/25/quy-tac-blog/</guid>
+        
+        <category>guide</category>
+        
+        
+        <category>Guide</category>
+        
+      </item>
     
       <item>
         <title>Test mark down</title>
         <description>Một số hướng dẫn cơ bản để sử dụng markdown!</description>
         <pubDate>Thu, 24 Aug 2017 22:00:00 +0700</pubDate>
-        <link>quoctrong288.github.io/2017/08/24/test-post/</link>
-        <guid isPermaLink="true">quoctrong288.github.io/2017/08/24/test-post/</guid>
+        <link>https://quoctrong288.github.io/2017/08/24/test-post/</link>
+        <guid isPermaLink="true">https://quoctrong288.github.io/2017/08/24/test-post/</guid>
         
-        <category>test</category>
+        <category>guide</category>
         
         
-        <category>test</category>
+        <category>Guide</category>
         
       </item>
     
