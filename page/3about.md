@@ -9,7 +9,7 @@ type: page
 * content
 {:toc}
 
-## Thông tin về mình sẽ được viết ở đây
+## Hi, I'm Trong!
 
 * GitHub：[Quoctrong288](https://github.com/quoctrong288)
 * Email：quoctrong.qb@gmail.com
@@ -17,8 +17,3 @@ type: page
 * [Twitter](https://twitter.com/quoctrongqb)
 
 ** [https://github.com/quoctrong288/quoctrong288.github.io](https://github.com/quoctrong288/quoctrong288.github.io)**
-*2016.6.20*
-
-## Comments
-
-{% include comments.html %}

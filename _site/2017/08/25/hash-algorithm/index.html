@@ -7,41 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Hash algorithm</title>
-    <meta name="description" content="Thuật toán hash xử lý chuỗi">
+    <meta name="description" content="  Sơ lượcSơ lượcHash (băm) là một giải thuật sinh ra các giá trị băm tương ứng với một khối dữ liệu. Cụ thể trong giải thuật và lập trình thì đa số là sử dụn...">
 
     <link rel="shortcut icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="icon" href="/favicon.ico?" type="image/x-icon">
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="https://quoctrong288.github.io/2017/08/25/hash-algorithm/">
-    <link rel="alternate" type="application/rss+xml" title="QT" href="https://quoctrong288.github.io/feed.xml ">
-
-
-    <script>
-    // 百度统计代码
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?cf8506e0ef223e57ff6239944e5d46a4";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
-
-
-    <script>
-    // google analytics
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-72449510-4', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-
+    <link rel="canonical" href="http://localhost:4000/2017/08/25/hash-algorithm/">
+    <link rel="alternate" type="application/rss+xml" title="QT" href="http://localhost:4000/feed.xml ">
 
 
 <script type="text/x-mathjax-config">
@@ -64,7 +38,7 @@
     <header id="top">
     <div class="wrapper">
         <a href="/" class="brand">QT</a>
-        <small>Dev Engineer</small>
+        <small>Software Engineer</small>
         <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
         <nav id="headerNav">
             <ul>
@@ -90,29 +64,9 @@
                     
                     <li>
                         
-                        <a href="/category/">
-                        
-                            <i class="fa fa-th-list"></i>Categories
-                        </a>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        
                         <a href="/tag/">
                         
                             <i class="fa fa-tags"></i>Tags
-                        </a>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        
-                        <a href="/collection/">
-                        
-                            <i class="fa fa-bookmark"></i>Collections
                         </a>
                     </li>
                     
@@ -143,6 +97,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -159,31 +115,7 @@
             </div>
 
             <div class="label-card">
-                <i class="fa fa-user"></i>Quoc Trong Pham
                 
-            </div>
-
-            <div class="label-card">
-                
-            </div>
-
-            <div class="label-card">
-            
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#String" title="Category: String" rel="category">String</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
             </div>
 
             <div class="label-card">
@@ -215,7 +147,8 @@
 <h2 id="sơ-lược">Sơ lược</h2>
 
 <p>Hash (băm) là một giải thuật sinh ra các giá trị băm tương ứng với một khối dữ liệu. Cụ thể trong giải thuật và lập trình thì đa số là sử dụng hash để lấy một đoạn mã của một chuỗi ký tự qua kiểu dữ liệu số nguyên.
-Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thường là một số nguyên) duy nhất. Việc này sẽ giúp chúng ta rất nhiều trong việc so sánh hai xâu, hai xâu có cùng mã hash thì sẽ bằng nhau.</p>
+Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thường là một số nguyên) duy nhất. Việc này sẽ giúp chúng ta rất nhiều trong việc so sánh hai xâu, hai xâu có cùng mã hash thì sẽ bằng nhau.
+<!--more--></p>
 
 <h2 id="bài-tập-ví-dụ">Bài tập ví dụ</h2>
 
@@ -235,11 +168,10 @@ Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thư�
 
 <p>Để tính mã hash của một xâu, ta chỉ cần đơn giản như sau:</p>
 
-<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="n">hasP</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">hasP</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">n</span> <span class="o">=</span> <span class="n">a</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
    <span class="n">hashP</span> <span class="o">=</span> <span class="p">(</span><span class="n">hashP</span> <span class="o">*</span> <span class="mi">26</span> <span class="o">+</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="sc">'a'</span><span class="p">);</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <p>Tính mã hash của 1 đoạn con từ i đến j:</p>
 
@@ -251,7 +183,7 @@ Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thư�
 
 <h2 id="mã-nguồn">Mã nguồn</h2>
 
-<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">typedef</span> <span class="kt">long</span> <span class="kt">long</span> <span class="n">ll</span><span class="p">;</span>
 <span class="k">const</span> <span class="kt">int</span> <span class="n">maxN</span> <span class="o">=</span> <span class="mf">1e6</span> <span class="o">+</span> <span class="mi">100</span><span class="p">;</span>
 <span class="k">const</span> <span class="n">ll</span> <span class="n">mod</span> <span class="o">=</span> <span class="mf">1e9</span> <span class="o">+</span> <span class="mi">3</span><span class="p">;</span>
 <span class="k">const</span> <span class="n">ll</span> <span class="n">inf</span> <span class="o">=</span> <span class="mf">1e9</span><span class="p">;</span>
@@ -283,8 +215,7 @@ Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thư�
      
     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
         </article>
         <hr>
@@ -299,6 +230,25 @@ Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thư�
             
                 
                     
+                        
+                        <h2 id="similar_posts">Similar Posts</h2>
+                        <ul>
+                        
+                        <li class="relatedPost">
+                            <a href="/2017/08/26/matrix-multiply/">Matrix multiply
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+            
+        
+            
+            
+                
+                    
                 
             
         
@@ -316,6 +266,68 @@ Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thư�
                 
             
         
+            
+            
+                
+                    
+                
+            
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/09/10/phuong-phap-tinh-tim-nghiem/">Phương pháp tính - Tìm nghiệm
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/09/10/phuong-phap-tinh-gia-tri-ham/">Phương pháp tính - tính giá trị hàm
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+                
+                    
+                        
+                        <li class="relatedPost">
+                            <a href="/2015/09/10/phuong-phap-tinh-gan-dung/">Phương pháp tính - Chính xác hóa nghiệm
+                            
+                            </a>
+                        </li>
+                        
+                        
+                    
+                
+            
+        
+        
+            </ul>
         
 
         <div class="post-recent">
@@ -333,35 +345,6 @@ Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thư�
 </div>
 
 
-        <h2 id="comments">Comments</h2>
-        
-<div id="disqus_thread"></div>
-<script>
-    /**
-     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-
-    var disqus_config = function() {
-        this.page.url = 'https://quoctrong288.github.io/2017/08/25/hash-algorithm/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://quoctrong288.github.io/2017/08/25/hash-algorithm/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document,
-            s = d.createElement('script');
-
-        s.src = '//quoctrong288.disqus.com/embed.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
-
-
     </div>
     <button class="anchor"><i class="fa fa-anchor"></i></button>
     <div class="right">
@@ -374,7 +357,8 @@ Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thư�
                 </div>
                 <ul id="content-side" class="content-ul">
                     
-                    <li><a href="#comments">Comments</a></li>
+                    <li><a href="#similar_posts">Similar Posts</a></li>
+                    
                 </ul>
             </div>
             <!-- 其他div框放到这里 -->
@@ -397,25 +381,21 @@ Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thư�
 
 
     <footer class="site-footer">
-
-
     <div class="wrapper">
-
         <p class="description">
-             My blog！ 
+             © 2021 Quoc Trong Pham 
         </p>
         <p class="contact">
             Contact me at: 
             <a href="https://github.com/quotrong288" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
-            <a href="mailto:quoctrong.qb@gmail.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>   
-            <a href="https://www.facebook.com/quoctrong.qb" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>    
+            <a href="mailto:quoctrong.qb@gmail.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
+            <a href="https://www.facebook.com/quoctrong.qb" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>   
         </p>
         <p>
-            Tong luot truy cap: <span id="busuanzi_value_site_pv"></span>luot，So nguoi dung<span id="busuanzi_value_site_uv"></span> Tong nguoi xem post nay<span id="busuanzi_value_page_pv"></span>nguoi
+            ...
         </p>
     </div>
 </footer>
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     <div class="back-to-top">
     <a href="#top" data-scroll>

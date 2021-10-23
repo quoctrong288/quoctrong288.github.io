@@ -2,10 +2,7 @@
 layout: post
 title:  "Matrix multiply"
 date:   2017-08-26 10:00:00
-categories: Math
-tags: math dp
-excerpt: Phép nhân ma trận và ứng dụng
-author: Quoc Trong Pham
+tags: math algorithms
 mathjax: true
 ---
 
@@ -14,7 +11,7 @@ mathjax: true
 
 ## Giới thiệu
 
-Nhân ma trận là một phép tính toán nhân hai ma trận lại với nhau và tạo ra một ma trận mới là tích hai ma trận. Nó được định nghĩa tóm tắt như sau:
+Nhân ma trận là một phép tính toán nhân hai ma trận lại với nhau và tạo ra một ma trận mới là tích hai ma trận. <!--more--> Nó được định nghĩa tóm tắt như sau:
 * Cho 2 ma trận: **$A$** kích thước **$M$** * **$N$** và **$B$** kích thước **$N$** * **$P$** (số cột của ma trận thứ nhất phải bằng số hàng của ma trận thứ hai mới thực hiện được phép nhân trên hai ma trận)
 * Tích hai ma trận là ma trận **$C$** kích thước **$M$** * **$P$** được tính theo công thức: 
 <br>

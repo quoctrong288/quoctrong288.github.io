@@ -49,22 +49,6 @@
                 i {
                     margin-right: 5px;
                 }
-                .categories {
-                    padding: 0 15px;
-                    i {
-                        color: #9e9d9d;
-                    }
-                    a {
-                        padding: 0 5px;
-                        background-color: #9e9d9d;
-                        color: #fff;
-                        font-size: 90%;
-                        transition: 0.3s ease;
-                        &:hover {
-                            background-color: #b6b6b9;
-                        }
-                    }
-                }
                 .pageTag {
                     i {
                         color: #c6cbe9;
@@ -176,11 +160,6 @@
                     .title {
                         display: block;
                         font-size: 16px;
-                    }
-                    .categories {
-                        font-size: 12px;
-                        padding-left: 0;
-                        padding-right: 10px;
                     }
                 }
             }

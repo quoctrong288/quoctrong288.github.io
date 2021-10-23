@@ -3,39 +3,48 @@
   <channel>
     <title>QT</title>
     <description></description>
-    <link>https://quoctrong288.github.io/</link>
-    <atom:link href="https://quoctrong288.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 26 Aug 2017 21:37:55 +0700</pubDate>
-    <lastBuildDate>Sat, 26 Aug 2017 21:37:55 +0700</lastBuildDate>
-    <generator>Jekyll v3.5.2</generator>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 23 Oct 2021 12:41:38 +0700</pubDate>
+    <lastBuildDate>Sat, 23 Oct 2021 12:41:38 +0700</lastBuildDate>
+    <generator>Jekyll v4.2.1</generator>
     
       <item>
         <title>Matrix multiply</title>
-        <description>Phép nhân ma trận và ứng dụng</description>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#giới-thiệu&quot; id=&quot;markdown-toc-giới-thiệu&quot;&gt;Giới thiệu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;giới-thiệu&quot;&gt;Giới thiệu&lt;/h2&gt;
+
+Nhân ma trận là một phép tính toán nhân hai ma trận lại với nhau và tạo ra một ma trận mới là tích hai ma trận.
+</description>
         <pubDate>Sat, 26 Aug 2017 17:00:00 +0700</pubDate>
-        <link>https://quoctrong288.github.io/2017/08/26/matrix-multiply/</link>
-        <guid isPermaLink="true">https://quoctrong288.github.io/2017/08/26/matrix-multiply/</guid>
+        <link>http://localhost:4000/2017/08/26/matrix-multiply/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/26/matrix-multiply/</guid>
         
         <category>math</category>
         
-        <category>dp</category>
-        
-        
-        <category>Math</category>
+        <category>algorithms</category>
         
       </item>
     
       <item>
         <title>Hash algorithm</title>
-        <description>Thuật toán hash xử lý chuỗi</description>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#sơ-lược&quot; id=&quot;markdown-toc-sơ-lược&quot;&gt;Sơ lược&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;sơ-lược&quot;&gt;Sơ lược&lt;/h2&gt;
+
+Hash (băm) là một giải thuật sinh ra các giá trị băm tương ứng với một khối dữ liệu. Cụ thể trong giải thuật và lập trình thì đa số là sử dụng hash để lấy một đoạn mã của một chuỗi ký tự qua kiểu dữ liệu số nguyên.
+Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thường là một số nguyên) duy nhất. Việc này sẽ giúp chúng ta rất nhiều trong việc so sánh hai xâu, hai xâu có cùng mã hash thì sẽ bằng nhau.
+</description>
         <pubDate>Fri, 25 Aug 2017 07:15:00 +0700</pubDate>
-        <link>https://quoctrong288.github.io/2017/08/25/hash-algorithm/</link>
-        <guid isPermaLink="true">https://quoctrong288.github.io/2017/08/25/hash-algorithm/</guid>
+        <link>http://localhost:4000/2017/08/25/hash-algorithm/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/25/hash-algorithm/</guid>
         
         <category>algorithms</category>
-        
-        
-        <category>String</category>
         
       </item>
     
@@ -43,13 +52,10 @@
         <title>Một số quy ước trong blog</title>
         <description>Một số quy ước khi post bài!</description>
         <pubDate>Fri, 25 Aug 2017 07:00:00 +0700</pubDate>
-        <link>https://quoctrong288.github.io/2017/08/25/quy-tac-blog/</link>
-        <guid isPermaLink="true">https://quoctrong288.github.io/2017/08/25/quy-tac-blog/</guid>
+        <link>http://localhost:4000/2017/08/25/quy-tac-blog/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/25/quy-tac-blog/</guid>
         
         <category>guide</category>
-        
-        
-        <category>Guide</category>
         
       </item>
     
@@ -57,13 +63,81 @@
         <title>Test mark down</title>
         <description>Một số hướng dẫn cơ bản để sử dụng markdown!</description>
         <pubDate>Thu, 24 Aug 2017 22:00:00 +0700</pubDate>
-        <link>https://quoctrong288.github.io/2017/08/24/test-post/</link>
-        <guid isPermaLink="true">https://quoctrong288.github.io/2017/08/24/test-post/</guid>
+        <link>http://localhost:4000/2017/08/24/test-post/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/08/24/test-post/</guid>
         
         <category>guide</category>
         
+      </item>
+    
+      <item>
+        <title>Game windows console: 2048</title>
+        <description>&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#giới-thiệu&quot; id=&quot;markdown-toc-giới-thiệu&quot;&gt;Giới thiệu&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+[old post]
+
+&lt;h2 id=&quot;giới-thiệu&quot;&gt;Giới thiệu&lt;/h2&gt;
+
+Chắc nhắc đến game 2048 thì ai cũng biết rồi. Một tựa game khá là hot trong khoảng đầu năm 2014. Cùng với Flappy Bird, 2048 là một tựa game với lối chơi đơn giản nhưng rất thú vị.
+</description>
+        <pubDate>Tue, 15 Sep 2015 17:00:00 +0700</pubDate>
+        <link>http://localhost:4000/2015/09/15/game-2048/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/09/15/game-2048/</guid>
         
-        <category>Guide</category>
+        <category>game</category>
+        
+      </item>
+    
+      <item>
+        <title>Phương pháp tính - Tìm nghiệm</title>
+        <description>
+[old post]
+
+Tổng hợp bài tập Phương Pháp Tính, Tìm nghiệm
+</description>
+        <pubDate>Thu, 10 Sep 2015 07:00:00 +0700</pubDate>
+        <link>http://localhost:4000/2015/09/10/phuong-phap-tinh-tim-nghiem/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/09/10/phuong-phap-tinh-tim-nghiem/</guid>
+        
+        <category>math</category>
+        
+        <category>algorithms</category>
+        
+      </item>
+    
+      <item>
+        <title>Phương pháp tính - tính giá trị hàm</title>
+        <description>
+[old post]
+
+Tổng hợp bài tập Phương Pháp Tính, chương Tính giá trị hàm
+</description>
+        <pubDate>Thu, 10 Sep 2015 07:00:00 +0700</pubDate>
+        <link>http://localhost:4000/2015/09/10/phuong-phap-tinh-gia-tri-ham/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/09/10/phuong-phap-tinh-gia-tri-ham/</guid>
+        
+        <category>math</category>
+        
+        <category>algorithms</category>
+        
+      </item>
+    
+      <item>
+        <title>Phương pháp tính - Chính xác hóa nghiệm</title>
+        <description>
+[old post]
+
+Tổng hợp bài tập Phương Pháp Tính, chương Giải gần đúng phương trình (chính xác hóa nghiệm)
+</description>
+        <pubDate>Thu, 10 Sep 2015 07:00:00 +0700</pubDate>
+        <link>http://localhost:4000/2015/09/10/phuong-phap-tinh-gan-dung/</link>
+        <guid isPermaLink="true">http://localhost:4000/2015/09/10/phuong-phap-tinh-gan-dung/</guid>
+        
+        <category>math</category>
+        
+        <category>algorithms</category>
         
       </item>
     

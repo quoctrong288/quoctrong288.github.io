@@ -2,20 +2,18 @@
 layout: post
 title:  "Hash algorithm"
 date:   2017-08-25 00:15:00
-categories: String
 tags: algorithms
-excerpt: Thuật toán hash xử lý chuỗi
-author: Quoc Trong Pham
 mathjax: true
 ---
 
-* content 
+* content
 {:toc}
 
 ## Sơ lược
 
 Hash (băm) là một giải thuật sinh ra các giá trị băm tương ứng với một khối dữ liệu. Cụ thể trong giải thuật và lập trình thì đa số là sử dụng hash để lấy một đoạn mã của một chuỗi ký tự qua kiểu dữ liệu số nguyên.
 Việc sử dụng Hash thì mỗi xâu ký tự sẽ có một mã Hash (thường là một số nguyên) duy nhất. Việc này sẽ giúp chúng ta rất nhiều trong việc so sánh hai xâu, hai xâu có cùng mã hash thì sẽ bằng nhau.
+<!--more-->
 
 ## Bài tập ví dụ
 

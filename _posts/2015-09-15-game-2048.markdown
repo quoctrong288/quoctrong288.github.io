@@ -1,0 +1,35 @@
+---
+layout: post
+title: "Game windows console: 2048"
+date: 2015-09-15 10:00:00
+tags: game
+mathjax: true
+---
+
+* content 
+{:toc}
+
+[old post]
+
+## Giới thiệu
+
+Chắc nhắc đến game 2048 thì ai cũng biết rồi. Một tựa game khá là hot trong khoảng đầu năm 2014. Cùng với Flappy Bird, 2048 là một tựa game với lối chơi đơn giản nhưng rất thú vị.
+<!--more-->
+
+![2048](/assets/images/game2048.jpeg)
+
+Hôm nay mình xin giới thiệu game 2048 mình code bằng C++ trên nền Visual Studio 2013. Trong game mình xin nói một vài điều cho ai muốn biết rõ hơn về kết cấu của game:
+
+- Game sử dụng các hàm thao tác console cơ bản ```gotoXY(); showCur();```
+- Game sử dụng 1 mảng 2 chiều để biểu thị cho các số. Các giá trị = 0 thì - không in ra màn hình.
+- Nhận ký tự nhập vào bằng lệnh ```char key = _getch();``` Rồi xét các giá trị của key.
+- Thuật toán gộp các giá trị thì rất đơn giản, mình chia thành 2 bước. Đầu tiên dồn các giá trị về theo 1 hướng, sau đó xét các giá trị giống nhau rồi gộp lại.
+- Tạo các giá trị ban đầu bằng hàm ```rand() ``` và ```srand(time (NULL));``` điều chỉnh mỗi lần xuất hiện một giá trị khác nhau.
+- Tạo hàm kiểm tra, nếu không di chuyển được thì sẽ không hiện thêm số.
+- Tạo file ghi điểm, mỗi vòng game xét điểm số hiện tại và *bestScore*, nếu điểm hiện tại lớn hơn *bestScore* thì cập nhật vào file *bestScore* luôn.
+
+Còn một số thứ nữa, các bạn xem Source thì sẽ rõ:
+
+## Source
+
+[2048](https://github.com/quoctrong288/game_consoles/tree/master/2048/ver%201.0)

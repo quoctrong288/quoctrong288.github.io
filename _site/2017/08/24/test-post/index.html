@@ -14,34 +14,8 @@
     <link rel="stylesheet" href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_8v3czwksspqlg14i.css">
     <link rel="stylesheet" href="/css/main.css ">
-    <link rel="canonical" href="https://quoctrong288.github.io/2017/08/24/test-post/">
-    <link rel="alternate" type="application/rss+xml" title="QT" href="https://quoctrong288.github.io/feed.xml ">
-
-
-    <script>
-    // 百度统计代码
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?cf8506e0ef223e57ff6239944e5d46a4";
-      var s = document.getElementsByTagName("script")[0];
-      s.parentNode.insertBefore(hm, s);
-    })();
-    </script>
-
-
-    <script>
-    // google analytics
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-72449510-4', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-
+    <link rel="canonical" href="http://localhost:4000/2017/08/24/test-post/">
+    <link rel="alternate" type="application/rss+xml" title="QT" href="http://localhost:4000/feed.xml ">
 
 
 <script type="text/x-mathjax-config">
@@ -64,7 +38,7 @@
     <header id="top">
     <div class="wrapper">
         <a href="/" class="brand">QT</a>
-        <small>Dev Engineer</small>
+        <small>Software Engineer</small>
         <button id="headerMenu" class="menu"><i class="fa fa-bars"></i></button>
         <nav id="headerNav">
             <ul>
@@ -90,29 +64,9 @@
                     
                     <li>
                         
-                        <a href="/category/">
-                        
-                            <i class="fa fa-th-list"></i>Categories
-                        </a>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        
                         <a href="/tag/">
                         
                             <i class="fa fa-tags"></i>Tags
-                        </a>
-                    </li>
-                    
-                
-                    
-                    <li>
-                        
-                        <a href="/collection/">
-                        
-                            <i class="fa fa-bookmark"></i>Collections
                         </a>
                     </li>
                     
@@ -143,6 +97,8 @@
                 
                     
                 
+                    
+                
             </ul>
         </nav>
     </div>
@@ -159,31 +115,7 @@
             </div>
 
             <div class="label-card">
-                <i class="fa fa-user"></i>Quoc Trong Pham
                 
-            </div>
-
-            <div class="label-card">
-                
-            </div>
-
-            <div class="label-card">
-            
-
-
-<!-- <span class="point">•</span> -->
-<span class="categories">
-  <i class="fa fa-th-list"></i>
-  
-    
-        <a href="/category/#Guide" title="Category: Guide" rel="category">Guide</a>
-    
-  
-
-  <!-- <span class="point">•</span> -->
-</span>
-
-
             </div>
 
             <div class="label-card">
@@ -219,7 +151,7 @@
 </ul>
 
 <p>Thêm 
-<code class="highlighter-rouge">* content \n {:toc}</code> vào đầu bài viết để chia mục nội dung bên phải (\n là xuống dòng), phần này sẽ chia theo các header dưới đây:</p>
+<code class="language-plaintext highlighter-rouge">* content \n {:toc}</code> vào đầu bài viết để chia mục nội dung bên phải (\n là xuống dòng), phần này sẽ chia theo các header dưới đây:</p>
 
 <h2 id="phần-header">Phần header</h2>
 
@@ -234,7 +166,7 @@
   </li>
   <li><em>in nghiêng</em></li>
   <li><strong>in đậm</strong></li>
-  <li><code class="highlighter-rouge">đóng khung</code></li>
+  <li><code class="language-plaintext highlighter-rouge">đóng khung</code></li>
 </ul>
 
 <h2 id="danh-sách">Danh sách</h2>
@@ -277,14 +209,13 @@
 
 <h2 id="nhúng-code">Nhúng code</h2>
 
-<div class="language-c++ highlighter-rouge"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
+<div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;iostream&gt;
 </span>
 <span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
 	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"HELLO WORLD!"</span><span class="p">;</span>
 	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="p">}</span>
-</code></pre>
-</div>
+</code></pre></div></div>
 
 <h3 id="tạo-trích-dẫn">Tạo trích dẫn</h3>
 <ul>
@@ -294,7 +225,7 @@
     </blockquote>
   </li>
   <li>Một cách khác để tạo danh sách: 
-<code class="highlighter-rouge">[+]</code></li>
+<code class="language-plaintext highlighter-rouge">[+]</code></li>
 </ul>
 
 <h2 id="tạo-bảng">Tạo bảng</h2>
@@ -329,7 +260,7 @@
 <h2 id="tạo-chú-thích">Tạo chú thích</h2>
 
 <ul>
-  <li>Chú thích<sup id="fnref:1"><a href="#fn:1" class="footnote">1</a></sup></li>
+  <li>Chú thích<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup></li>
 </ul>
 
 <p>Chi tiết hơn ở link sau: <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">LINK</a></p>
@@ -339,15 +270,15 @@
   <li>Sử dụng Mathjax</li>
 </ul>
 
-<script type="math/tex; mode=display">f(x) = ax + b</script>
+\[f(x) = ax + b\]
 
 <ul>
   <li>Inline Mathjax $a \neq b$</li>
 </ul>
-<div class="footnotes">
+<div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:1">
-      <p>Là cái gì đó, nó luôn luôn nằm ở dưới cùng.&nbsp;<a href="#fnref:1" class="reversefootnote">&#8617;</a></p>
+    <li id="fn:1" role="doc-endnote">
+      <p>Là cái gì đó, nó luôn luôn nằm ở dưới cùng. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -394,12 +325,54 @@
                 
             
         
+            
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+        
+            
+            
+                
+                    
+                
+            
+                
+                    
+                
+            
+        
         
             </ul>
         
 
         <div class="post-recent">
     <div class="pre">
+        
+        <p><strong>Previous post: </strong> <a href="/2015/09/15/game-2048/">Game windows console: 2048</a></p>
         
     </div>
     <div class="nex">
@@ -409,35 +382,6 @@
         
     </div>
 </div>
-
-
-        <h2 id="comments">Comments</h2>
-        
-<div id="disqus_thread"></div>
-<script>
-    /**
-     * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-     * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-     */
-
-    var disqus_config = function() {
-        this.page.url = 'https://quoctrong288.github.io/2017/08/24/test-post/'; // Replace PAGE_URL with your page's canonical URL variable
-        this.page.identifier = 'https://quoctrong288.github.io/2017/08/24/test-post/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-    };
-
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document,
-            s = d.createElement('script');
-
-        s.src = '//quoctrong288.disqus.com/embed.js';
-
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-
-
 
 
     </div>
@@ -454,7 +398,6 @@
                     
                     <li><a href="#similar_posts">Similar Posts</a></li>
                     
-                    <li><a href="#comments">Comments</a></li>
                 </ul>
             </div>
             <!-- 其他div框放到这里 -->
@@ -477,25 +420,21 @@
 
 
     <footer class="site-footer">
-
-
     <div class="wrapper">
-
         <p class="description">
-             My blog！ 
+             © 2021 Quoc Trong Pham 
         </p>
         <p class="contact">
             Contact me at: 
             <a href="https://github.com/quotrong288" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>  
-            <a href="mailto:quoctrong.qb@gmail.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>   
-            <a href="https://www.facebook.com/quoctrong.qb" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>    
+            <a href="mailto:quoctrong.qb@gmail.com" title="email"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>  
+            <a href="https://www.facebook.com/quoctrong.qb" title="Facebook"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>   
         </p>
         <p>
-            Tong luot truy cap: <span id="busuanzi_value_site_pv"></span>luot，So nguoi dung<span id="busuanzi_value_site_uv"></span> Tong nguoi xem post nay<span id="busuanzi_value_page_pv"></span>nguoi
+            ...
         </p>
     </div>
 </footer>
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
     <div class="back-to-top">
     <a href="#top" data-scroll>
